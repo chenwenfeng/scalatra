@@ -22,4 +22,6 @@ trait EmbeddedJettyContainer extends JettyContainer {
   }
 
   def stop() = server.stop()
+
+  def baseUrl = "http://localhost:"+port
 }

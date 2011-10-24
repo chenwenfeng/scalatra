@@ -38,6 +38,8 @@ trait ScalatraTests extends JettyContainer with Client {
   protected def start() = tester.start()
   protected def stop() = tester.stop()
 
+  protected def baseUrl = "/"
+
   type Response = HttpTester
 
   def submit[A](req: HttpTester)(f: => A): A = {
